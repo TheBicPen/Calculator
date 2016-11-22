@@ -56,7 +56,7 @@ namespace Test_Calculator
                             Console.WriteLine("= " + (decimal1 + decimal2));
                             break;
 
-                            //currently broken...
+                            //currently broken
                             
                         case "^manual":
                             int exponentCounter = Decimal.ToInt32(decimal2);
