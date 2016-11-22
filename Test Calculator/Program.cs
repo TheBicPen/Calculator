@@ -63,7 +63,7 @@ namespace Test_Calculator
                             decimal output = decimal1;
                             while (exponentCounter != 0)
                             {
-                                Console.WriteLine(output * decimal1);
+                                Console.WriteLine(output);
                                 output = output * decimal1;
 
                                 if (exponentCounter > 0)
