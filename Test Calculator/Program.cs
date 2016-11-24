@@ -38,24 +38,24 @@ namespace Test_Calculator
                     switch (input3)
                     {
                         case "*":
-                            Console.WriteLine(decimal1.ToString() + " " + input3 + " " + (decimal2.ToString()) + " = " + (decimal1 * decimal2));
+                            Console.WriteLine(decimal1 + " " + input3 + " " + decimal2 + " = " + (decimal1 * decimal2));
                             break;
 
                         case "-":
-                            Console.WriteLine(decimal1.ToString() + " " + input3 + " " + (decimal2.ToString()) + " = " + (decimal1 - decimal2));
+                            Console.WriteLine(decimal1 + " " + input3 + " " + decimal2 + " = " + (decimal1 - decimal2));
                             break;
 
                         case ":":
-                            Console.WriteLine(decimal1.ToString() + " " + input3 + " " + (decimal2.ToString()) + " = " + (decimal1 / decimal2));
+                            Console.WriteLine(decimal1 + " " + input3 + " " + decimal2 + " = " + (decimal1 / decimal2));
                             break;
 
                             //same operator as above
                         case "/":
-                            Console.WriteLine(decimal1.ToString() + " " + input3 + " " + (decimal2.ToString()) + " = " + (decimal1 / decimal2));
+                            Console.WriteLine(decimal1 + " " + input3 + " " + decimal2 + " = " + (decimal1 / decimal2));
                             break;
 
                         case "+":
-                            Console.WriteLine(decimal1.ToString() + " " + input3 + " " + (decimal2.ToString()) + " = " + (decimal1 + decimal2));
+                            Console.WriteLine(decimal1 + " " + input3 + " " + decimal2 + " = " + (decimal1 + decimal2));
                             break;
 
                 
@@ -64,9 +64,9 @@ namespace Test_Calculator
                             decimal output = decimal1;
                             while (exponentCounter != 0)
                             {
-                                //fix this
 
-                                Console.WriteLine(decimal1.ToString() + " " + input3 + " " + (exponentCounter) + " = " + output);
+                                //currently an inefficient workaround
+                                Console.WriteLine(decimal1 + " " + input3 + " " + (decimal2 + 1 - exponentCounter) + " = " + output);
                                 output = output * decimal1;
 
                                 if (exponentCounter > 0)
@@ -79,7 +79,7 @@ namespace Test_Calculator
                             break;
 
                         case "^":
-                            Console.WriteLine (decimal1.ToString() + " " + input3 + " " + (decimal2.ToString()) + " = " + Math.Pow (Decimal.ToDouble(decimal1) , Decimal.ToDouble(decimal2) ) );
+                            Console.WriteLine (decimal1 + " " + input3 + " " + decimal2 + " = " + Math.Pow (Decimal.ToDouble(decimal1) , Decimal.ToDouble(decimal2) ) );
                             break;
 
                         default:
