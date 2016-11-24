@@ -12,6 +12,9 @@ namespace Test_Calculator
             decimal decimal1;
             decimal decimal2;
 
+            //declaring the operator used for the current function
+            //string operator1;
+
             bool retry = true;
 
             while (retry == true)
@@ -19,7 +22,6 @@ namespace Test_Calculator
                 Console.WriteLine("Input a number");
                 var input1 = Console.ReadLine();
                 Decimal.TryParse(input1, out decimal1);
-
 
 
                 Console.WriteLine("Input a number");
@@ -36,34 +38,35 @@ namespace Test_Calculator
                     switch (input3)
                     {
                         case "*":
-                            Console.WriteLine("= " + (decimal1 * decimal2));
+                            Console.WriteLine(decimal1.ToString() + " " + input3 + " " + (decimal2.ToString()) + " = " + (decimal1 * decimal2));
                             break;
 
                         case "-":
-                            Console.WriteLine("= " + (decimal1 - decimal2));
+                            Console.WriteLine(decimal1.ToString() + " " + input3 + " " + (decimal2.ToString()) + " = " + (decimal1 - decimal2));
                             break;
 
                         case ":":
-                            Console.WriteLine("= " + (decimal1 / decimal2));
+                            Console.WriteLine(decimal1.ToString() + " " + input3 + " " + (decimal2.ToString()) + " = " + (decimal1 / decimal2));
                             break;
 
                             //same operator as above
                         case "/":
-                            Console.WriteLine("= " + (decimal1 / decimal2));
+                            Console.WriteLine(decimal1.ToString() + " " + input3 + " " + (decimal2.ToString()) + " = " + (decimal1 / decimal2));
                             break;
 
                         case "+":
-                            Console.WriteLine("= " + (decimal1 + decimal2));
+                            Console.WriteLine(decimal1.ToString() + " " + input3 + " " + (decimal2.ToString()) + " = " + (decimal1 + decimal2));
                             break;
 
-                            //currently broken
-                            
+                
                         case "^manual":
                             int exponentCounter = Decimal.ToInt32(decimal2);
                             decimal output = decimal1;
                             while (exponentCounter != 0)
                             {
-                                Console.WriteLine(output);
+                                //fix this
+
+                                Console.WriteLine(decimal1.ToString() + " " + input3 + " " + (exponentCounter) + " = " + output);
                                 output = output * decimal1;
 
                                 if (exponentCounter > 0)
@@ -76,7 +79,7 @@ namespace Test_Calculator
                             break;
 
                         case "^":
-                            Console.WriteLine (Math.Pow (Decimal.ToDouble(decimal1) , Decimal.ToDouble(decimal2) ) );
+                            Console.WriteLine (decimal1.ToString() + " " + input3 + " " + (decimal2.ToString()) + " = " + Math.Pow (Decimal.ToDouble(decimal1) , Decimal.ToDouble(decimal2) ) );
                             break;
 
                         default:
