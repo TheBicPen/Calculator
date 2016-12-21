@@ -1,6 +1,5 @@
 ﻿using System;
-
-
+using System.Linq;
 
 namespace Test_Calculator
 {
@@ -38,7 +37,11 @@ namespace Test_Calculator
                 try
                 {
 
-                    var test = Array.Find(operatorList, s=> s.Equals(input3));
+                    operatorExists = operatorList.Contains(input3);
+                    if (operatorExists == true)
+                    {
+                        Console.WriteLine("= " + (decimal1 + input3 + decimal2));
+                    }
 
                     /*
                     switch (input3)
