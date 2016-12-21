@@ -12,6 +12,11 @@ namespace Test_Calculator
             decimal decimal1;
             decimal decimal2;
 
+            //declaring the array for the command list
+            string[] operatorList = new string[] { "*", "-", "+", ":", "/", "^", "^manual" };
+
+            bool operatorExists;
+
             bool retry = true;
 
             while (retry == true)
@@ -33,6 +38,9 @@ namespace Test_Calculator
                 try
                 {
 
+                    var test = Array.Find(operatorList, s=> s.Equals(input3));
+
+                    /*
                     switch (input3)
                     {
                         case "*":
@@ -83,6 +91,7 @@ namespace Test_Calculator
                             Console.WriteLine("invalid input");
                             break;
                     }
+                    */
 
                 }
 
